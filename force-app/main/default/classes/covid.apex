@@ -1,0 +1,2 @@
+RestCallouts.getCovidInfo();
+RestCallouts.postPost();
