@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Get Recent Leads" icon-name="standard:lead">
+        <div class="slds-var-m-around_medium">
+            <lightning-button
+                    label="Recent Leads"
+                    variant="brand"
+                    onclick={ApexMethod}>
+                </lightning-button>
+                <div class="slds-var-m-top_small">
+                    <template if:true={leads}>
+                        <lightning-datatable
+                            key-field="Id"
+                            data ={leads}
+                            columns={columns}>
+                        </lightning-datatable>   
+                    </template>
+                    <template if:true={error}>
+                        {error}
+                    </template>
+                </div>            
+        </div>
+    </lightning-card>
+    
+</template>

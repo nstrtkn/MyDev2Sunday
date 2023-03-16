@@ -1,0 +1,46 @@
+<template>
+    <lightning-card title="CREATE RECORD LEAD " icon-name="standard:lead">
+        <div class="slds-var-m-around_medium">
+            <form class="leadform">
+                <lightning-input
+                    label="First Name"
+                    name="FirstName"
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-input
+                    label="Last Name"
+                    name="LastName"
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-input
+                    label="Email"
+                    name="Email"
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-input
+                    label="Phone"
+                    name="Phone"
+                    onchange={changeHandler}>
+                </lightning-input>
+                <lightning-input
+                    label="Company"
+                    name="Company"
+                    onchange={changeHandler}>
+                </lightning-input>            
+                <div class="slds-var-m-top_small slds-align_absolute-center">
+                <lightning-button
+                    label="Cancel"
+                    variant="neutral"
+                    class="slds-var-m-right_x-small"
+                    onclick={cancelLead}>
+                </lightning-button>
+                <lightning-button
+                    label="Create Lead"
+                    variant="brand"
+                    onclick={saveLead}>
+                </lightning-button>
+                </div> 
+            </form>
+        </div>
+    </lightning-card>
+</template>

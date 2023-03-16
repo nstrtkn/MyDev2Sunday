@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="CASE EDIT FORM SUNDAY" icon-name="standard:case">
+        <div class="slds-var-m-around_medium">
+            <lightning-record-edit-form
+                object-api-name={objectName}
+                record-id={recordId}
+                onsuccess={successHandler}>
+                <lightning-messages></lightning-messages>
+                <div class="slds-grid slds-gutters">
+                    <div class="slds-col">
+                    <lightning-input-field field-name={fields.subject}></lightning-input-field>
+                    <lightning-input-field field-name={fields.priority}></lightning-input-field>
+                    <lightning-input-field field-name={fields.status}></lightning-input-field>
+                    <lightning-input-field field-name={fields.desc}></lightning-input-field>
+                    <lightning-input-field field-name={fields.origin}></lightning-input-field>
+                    </div>
+                    <div class="slds-col">
+                    <lightning-output-field field-name={fields.accName}></lightning-output-field>
+                    <lightning-output-field field-name={fields.contName}></lightning-output-field>
+                    </div>
+                </div>
+                <div class="slds-align_absolute-center">
+                    <lightning-button
+                    class="slds-var-m-right_x-small"
+                    variant="neutral"
+                    label="Cancel"
+                    type="reset">
+                    </lightning-button>
+                    <lightning-button
+                    class="slds-var-m-right_x-small"
+                    variant="brand"
+                    label="Save"
+                    type="submit">
+                    </lightning-button>
+                </div>
+            </lightning-record-edit-form>      
+        </div>
+    </lightning-card>
+</template>

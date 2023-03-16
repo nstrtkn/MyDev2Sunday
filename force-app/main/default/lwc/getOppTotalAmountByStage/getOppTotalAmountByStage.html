@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="GET TOTAL AMOUNT BY STAGE"
+                    icon-name="standard:opportunity">
+    <div class="slds-var-m-around_medium">
+        <lightning-combobox label="SELECT STAGE"
+                            options={stageOptions}
+                            onchange={changeHandler}>
+        </lightning-combobox>
+    <template if:true={sum}>
+       Total Amount : {sum}
+            </template>
+            <template if:true={error}>
+                {error}
+            </template>
+    </div>
+</lightning-card>
+</template>
